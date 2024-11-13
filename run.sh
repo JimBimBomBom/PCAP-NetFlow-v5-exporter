@@ -11,8 +11,8 @@ g++ -std=c++11 -g0 -O2 -Wall -Wextra -pedantic -o $OUTPUT_FILE -v $SOURCE_FILE -
 if [ $? -eq 0 ]; then
     echo "Compilation Successful!"
 
-    # ./$OUTPUT_FILE localhost:9905 data/network_traffic.pcap
-    ./$OUTPUT_FILE localhost:9905 data/large.pcap
+    ./$OUTPUT_FILE 127.0.0.1:9995 Data/network_traffic.pcap
+    # ./$OUTPUT_FILE 127.0.0.1:9995 Data/large.pcap
 else
     echo "Compilation failed."
 fi
